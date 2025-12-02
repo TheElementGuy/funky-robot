@@ -15,8 +15,6 @@ public class DriveSubsystem extends SubsystemBase {
 
     public DriveSubsystem() {
 
-        //TODO: add the correct diviceIds
-
         power = new SparkMax(17, MotorType.kBrushless);
         power.configure(new SparkMaxConfig(), ResetMode.kResetSafeParameters, PersistMode.kNoPersistParameters);
 
@@ -27,7 +25,7 @@ public class DriveSubsystem extends SubsystemBase {
 
     public void drive(double power, double turning) {
         this.power.set(power);
-        steer.set(turning);
+        steer.set(turning * 0.5);
     }
     
 }

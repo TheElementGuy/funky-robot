@@ -19,7 +19,7 @@ public class RobotContainer {
 	public RobotContainer() {
 
 		drive = new DriveSubsystem();
-		controller = new XboxController(2);
+		controller = new XboxController(0);
 		driveBrain = new DriveCommand(drive, controller);
 
 		drive.setDefaultCommand(driveBrain);
